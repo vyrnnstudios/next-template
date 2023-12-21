@@ -1,19 +1,15 @@
 import { PropsWithChildren } from 'react';
 
+import { GlobalStyle } from '@vyrnn/next-template/assets/styles';
+
 export default function ({ children }: PropsWithChildren) {
   return (
     <html lang="pt-br">
-      <head>
-        <style>
-          {`
-            body, * {
-              margin: 0;
-              padding: 0;
-            }
-          `}
-        </style>
-      </head>
-      <body>{children}</body>
+      <body>
+        <GlobalStyle />
+
+        {children}
+      </body>
     </html>
   );
 }
